@@ -7,6 +7,7 @@ public class Method {
     private static int[][] String;
 
     public static int square(int value) {
+
         return value * value;
     }
 
@@ -20,6 +21,13 @@ public class Method {
         String min = words[0];
         String max = words[0];
 
+        if (words.length == 0);{
+            System.out.println("Массив не пустой");
+        }
+        if (words.length == 1) {
+            System.out.println("Массив пустой");
+        }
+
         for (int i = 0; i < words.length; i++) {
             if (words[i].length() < min.length()) {
                 min = words[i];
@@ -29,5 +37,11 @@ public class Method {
         }
         return new String[]{min, max};
     }
+
+
+    static int factR(int n) {
+        return n <= 1 ? 1 : factR(n - 1) * n;
+    }
 }
+
 
