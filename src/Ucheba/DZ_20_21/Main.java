@@ -23,8 +23,9 @@ public class Main {
         words[6] = "Eagle";
         System.out.println(Arrays.toString(Method.cornerValuesArray(words)));
 
-        String[] words1 = new String[4];
-        words1[0] = "Bucket";
-        words1[1] = "Banana";
+
+        System.out.println(Method.factR(7));
+        System.out.println(Method.factR(9));
+        System.out.println(Method.factR(12));
     }
 }
