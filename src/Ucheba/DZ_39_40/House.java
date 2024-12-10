@@ -8,12 +8,6 @@ public class House {
     public House() {
     }
 
-//    public House(double floors, double rooms, double garage) {
-//        this.floors = floors;
-//        this.rooms = rooms;
-//        this.garage = garage;
-//    }
-
     private House(Builder builder) {
         this.floors = builder.floors;
         this.rooms = builder.rooms;
@@ -46,6 +40,17 @@ public class House {
         public House build() {
             return new House(this);
         }
+    }
+
+    public boolean Equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        House house = (House) o;
+        return floors == house.floors && rooms == house.rooms;
+    }
+
+    public int HashCode() {
+        return this.floors * this.rooms * this.garage;
     }
 
     @Override
